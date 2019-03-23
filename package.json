@@ -1,0 +1,31 @@
+{
+  "name": "ppp",
+  "version": "1.0.0",
+  "description": "This is simply a shortcut for `npm version patch && npm publish && git push` without the need to install a more complex tool like Grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adelriosantiago/ppp.git"
+  },
+  "keywords": [
+    "npm",
+    "version",
+    "patch",
+    "publish",
+    "npm version patch",
+    "npm publish",
+    "git push"
+  ],
+  "author": "Alejandro del Río Santiago <adelriosantiago@gmail.com> (http://www.adelriosantiago.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adelriosantiago/ppp/issues"
+  },
+  "homepage": "https://github.com/adelriosantiago/ppp#readme",
+  "dependencies": {
+    "node-cmd": "^3.0.0"
+  }
+}
