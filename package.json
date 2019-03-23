@@ -1,6 +1,6 @@
 {
   "name": "papupu",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PaPuPu is simply a shortcut for `npm version PAtch && npm PUblish && git PUsh`. For projects where Grunt is an overkill.",
   "main": "index.js",
   "scripts": {
