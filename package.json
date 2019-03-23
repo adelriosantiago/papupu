@@ -1,14 +1,14 @@
 {
-  "name": "ppp",
+  "name": "papupu",
   "version": "1.0.1",
-  "description": "This is simply a shortcut for `npm version patch && npm publish && git push` without the need to install a more complex tool like Grunt",
+  "description": "PaPuPu is simply a shortcut for `npm version PAtch && npm PUblish && git PUsh`. For projects where Grunt is an overkill.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adelriosantiago/ppp.git"
+    "url": "git+https://github.com/adelriosantiago/papupu.git"
   },
   "keywords": [
     "npm",
@@ -17,14 +17,15 @@
     "publish",
     "npm version patch",
     "npm publish",
+    "papupu",
     "git push"
   ],
   "author": "Alejandro del Río Santiago <adelriosantiago@gmail.com> (http://www.adelriosantiago.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adelriosantiago/ppp/issues"
+    "url": "https://github.com/adelriosantiago/papupu/issues"
   },
-  "homepage": "https://github.com/adelriosantiago/ppp#readme",
+  "homepage": "https://github.com/adelriosantiago/papupu#readme",
   "dependencies": {
     "node-cmd": "^3.0.0"
   }
