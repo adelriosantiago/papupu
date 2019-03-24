@@ -2,10 +2,12 @@
   "name": "papupu",
   "version": "1.0.4",
   "description": "PaPuPu is simply a shortcut for `npm version PAtch && npm PUblish && git PUsh`. For projects where Grunt is an overkill.",
-  "main": "papupu.js",
+  "main": "cli.js",
   "scripts": {
-    "start": "node papupu.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "papupu": "./cli.js"
   },
   "repository": {
     "type": "git",
