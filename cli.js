@@ -5,6 +5,8 @@ const [,, ...args] = process.argv;
 
 const commandToRun = `cd ${ process.cwd() } && npm version patch && npm publish && git push`;
 
+//TODO: Add support for dry run
+
 console.log("Running: ", commandToRun);
 
 cmd.get(
