@@ -1,2 +1,9 @@
-# ppp
-This is simply a shortcut for `npm version patch &amp;&amp; npm publish &amp;&amp; git push` without the need to install a more complex tool like Grunt
+# PaPuPu (Patch, Publish, Push)
+
+PaPuPu is simply a shortcut for `npm version Patch && npm Publish && git Push`. For projects where Grunt is an overkill.
+
+## Usage
+
+`npm install -g papupu`
+
+Then `papupu` on the directory of your wish.

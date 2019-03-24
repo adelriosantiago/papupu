@@ -1,9 +1,9 @@
-var cmd=require('node-cmd');
+var cmd = require('node-cmd');
 
-const currentPath = __dirname;
-const commandToRun = `cd ${ currentPath } && npm version patch && npm publish && git push`;
+const commandToRun = `cd ${ process.cwd() } && npm version patch && npm publish && git push`;
 
 console.log("Running: ", commandToRun);
+
 cmd.get(
   commandToRun,
   function(err, data, stderr) {
