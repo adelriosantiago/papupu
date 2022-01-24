@@ -7,5 +7,9 @@ const commandToRun = `cd ${process.cwd()} && npm version patch && npm publish &&
 console.log("Running: ", commandToRun);
 
 cmd.get(commandToRun, function (err, data, stderr) {
-  console.log("Done: ", err, data, stderr);
+  if (err) {
+    console.log("Unable to run commands")
+    throw err
+  }
+  console.log("Sucess, published new version: ", data);
 });
