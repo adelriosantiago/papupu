@@ -11,5 +11,5 @@ cmd.get(commandToRun, function (err, data, stderr) {
     console.log("Unable to run commands")
     throw err
   }
-  console.log("Sucess, published new version: ", data);
+  console.log("Success, published new version: ", data);
 });
