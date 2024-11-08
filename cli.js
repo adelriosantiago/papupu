@@ -6,10 +6,17 @@ const commandToRun = `cd ${process.cwd()} && npm version patch && npm publish &&
 
 console.log("Running: ", commandToRun);
 
-cmd.get(commandToRun, function (err, data, stderr) {
+cmd.get(commandToRun, (err, data, stderr) => {
   if (err) {
-    console.log("Unable to run commands")
-    throw err
+    if (err.message.includes("authorize this machine")) {
+      console.error(
+        "You are not loggedin. Please run `npm login` and try again."
+      );
+      return;
+    } else {
+      console.error("Error running papupu:");
+      throw err;
+    }
   }
   console.log("Success, published new version: ", data);
 });
