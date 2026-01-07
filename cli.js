@@ -15,7 +15,7 @@ console.info(`
 Running: ${commandToRun}
 `);
 
-cmd.get(commandToRun, (err, data, stderr) => {
+cmd.run(commandToRun, (err, data, stderr) => {
   if (err) {
     if (err.message.includes("authorize this machine")) {
       return console.error(
