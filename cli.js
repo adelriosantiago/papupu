@@ -25,6 +25,10 @@ cmd.get(commandToRun, (err, data, stderr) => {
       return console.error(
         "Your git working directory is not clean. Please commit or stash your changes and try again."
       );
+    } else if (err.message.includes("not currently on a branch.")) {
+      return console.error(
+        "Publishing done but \"git push\" failed because you are not currently on a branch. Please checkout a branch and run `git push` manually."
+      );
     } else {
       console.error("Error running papupu:");
       throw err;

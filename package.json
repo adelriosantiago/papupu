@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/adelriosantiago/papupu#readme",
   "dependencies": {
-    "node-cmd": "^3.0.0"
+    "node-cmd": "^5.0.0"
   }
 }
