@@ -9,14 +9,18 @@ console.log("Running: ", commandToRun);
 cmd.get(commandToRun, (err, data, stderr) => {
   if (err) {
     if (err.message.includes("authorize this machine")) {
-      console.error(
+      return console.error(
         "You are not loggedin. Please run `npm login` and try again."
       );
-      return;
+    } else if (err.message.includes("working directory not clean")) {
+      return console.error(
+        "Your git working directory is not clean. Please commit or stash your changes and try again."
+      );
     } else {
       console.error("Error running papupu:");
       throw err;
     }
   }
   console.log("Success, published new version: ", data);
+
 });
