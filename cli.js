@@ -2,7 +2,8 @@
 
 const cmd = require("node-cmd");
 const [, , ...args] = process.argv;
-const commandToRun = `cd ${process.cwd()} && npm version patch && npm publish && git push`;
+console.log("Running papupu with args:", args);
+const commandToRun = `cd ${process.cwd()} && npm version patch && npm publish ${args[0] ? `--otp=${args[0]}` : ""} && git push`;
 
 // Print "PaPuPu" art
 console.info(`
