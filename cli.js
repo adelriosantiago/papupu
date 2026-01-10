@@ -15,6 +15,9 @@ console.info(`
 Running: ${commandToRun}
 `);
 
+// TODO: Add "operation requires a one-time password"
+// TODO: Add npm error You can provide a one-time password by passing --otp=<code> to the command you ran.
+
 cmd.run(commandToRun, (err, data, stderr) => {
   if (err) {
     if (err.message.includes("authorize this machine")) {
@@ -25,9 +28,13 @@ cmd.run(commandToRun, (err, data, stderr) => {
       return console.error(
         "Your git working directory is not clean. Please commit or stash your changes and try again."
       );
-    } else if (err.message.includes("not currently on a branch.")) {
+    } else if (err.message.includes("not currently on a branch")) {
       return console.error(
         "Publishing done but \"git push\" failed because you are not currently on a branch. Please checkout a branch and run `git push` manually."
+      );
+    } else if (err.message.includes("token expired")) {
+      return console.error(
+        "Your npm token has expired. Please run `npm login` to refresh your token and try again."
       );
     } else {
       console.error("Error running papupu:");
