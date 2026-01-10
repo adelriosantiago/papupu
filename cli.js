@@ -2,7 +2,7 @@
 
 const cmd = require("node-cmd");
 const [, , ...args] = process.argv;
-const commandToRun = `cd ${process.cwd()} && npm login && npm version patch && npm publish && git push`;
+const commandToRun = `cd ${process.cwd()} && npm version patch && npm publish && git push`;
 
 // Print "PaPuPu" art
 console.info(`
